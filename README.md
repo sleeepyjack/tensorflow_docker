@@ -1,7 +1,7 @@
 # GPU-aware Tensorflow container
 
 ## Example `docker run` command
-`docker run -it -d --runtime=nvidia --restart=unless-stopped --shm-size=1G --ulimit memlock=-1 --ulimit stack=67108864 --name [OPTIONAL_CONTAINER_NAME] --hostname [OPTIONAL_HOST_NAME] -v [HOST_MOUNT_POINT]:/workspace sleeepyjack/tensorflow:latest`
+`docker run -it -d --runtime=nvidia --restart=unless-stopped --shm-size=1G --ulimit memlock=-1 --ulimit stack=67108864 --name [OPTIONAL_CONTAINER_NAME] --hostname [OPTIONAL_HOST_NAME] -p [TENSORBOARD_PORT]:6006 -v [HOST_MOUNT_POINT]:/workspace sleeepyjack/tensorflow:latest`
 
 ## Dependencies
 * Linux
